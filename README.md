@@ -6,29 +6,29 @@ PyTorch deep learning project made easy.
 <!-- code_chunk_output -->
 
 * [PyTorch Template Project](#pytorch-template-project)
-	* [Requirements](#requirements)
-	* [Features](#features)
-	* [Folder Structure](#folder-structure)
-	* [Usage](#usage)
-		* [Config file format](#config-file-format)
-		* [Using config files](#using-config-files)
-		* [Resuming from checkpoints](#resuming-from-checkpoints)
+        * [Requirements](#requirements)
+        * [Features](#features)
+        * [Folder Structure](#folder-structure)
+        * [Usage](#usage)
+                * [Config file format](#config-file-format)
+                * [Using config files](#using-config-files)
+                * [Resuming from checkpoints](#resuming-from-checkpoints)
     * [Using Multiple GPU](#using-multiple-gpu)
-	* [Customization](#customization)
-		* [Custom CLI options](#custom-cli-options)
-		* [Data Loader](#data-loader)
-		* [Trainer](#trainer)
-		* [Model](#model)
-		* [Loss](#loss)
-		* [metrics](#metrics)
-		* [Additional logging](#additional-logging)
-		* [Validation data](#validation-data)
-		* [Checkpoints](#checkpoints)
+        * [Customization](#customization)
+                * [Custom CLI options](#custom-cli-options)
+                * [Data Loader](#data-loader)
+                * [Trainer](#trainer)
+                * [Model](#model)
+                * [Loss](#loss)
+                * [metrics](#metrics)
+                * [Additional logging](#additional-logging)
+                * [Validation data](#validation-data)
+                * [Checkpoints](#checkpoints)
     * [Tensorboard Visualization](#tensorboard-visualization)
-	* [Contribution](#contribution)
-	* [TODOs](#todos)
-	* [License](#license)
-	* [Acknowledgements](#acknowledgements)
+        * [Contribution](#contribution)
+        * [TODOs](#todos)
+        * [License](#license)
+        * [Acknowledgements](#acknowledgements)
 
 <!-- /code_chunk_output -->
 
@@ -145,7 +145,7 @@ Config files are in `.json` format:
     "verbosity": 2,                    // 0: quiet, 1: per epoch, 2: full
   
     "monitor": "min val_loss"          // mode and metric for model performance monitoring. set 'off' to disable.
-    "early_stop": 10	                 // number of epochs to wait before early stop. set 0 to disable.
+    "early_stop": 10                     // number of epochs to wait before early stop. set 0 to disable.
   
     "tensorboard": true,               // enable tensorboard visualization
   }
@@ -227,7 +227,7 @@ which is increased to 256 by command line options.
 
   `BaseDataLoader` is an iterator, to iterate through batches:
   ```python
-  for batch_idx, (x_batch, y_batch) in data_loader:
+  for batch_idx, (x_batch, y_batch) in enumerate(data_loader):
       pass
   ```
 * **Example**
